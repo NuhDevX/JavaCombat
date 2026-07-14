@@ -1,0 +1,15 @@
+name: MinecraftJavaCombat
+main: com.JC.Main
+version: 1.0.0
+api: ["1.0.0"]
+author: Nuh
+description: Replicated Minecraft Java Edition combat mechanics (attack cooldown, critical hit, sweep attack, knockback, shield) in Nukkit/Bedrock.
+commands:
+  javacombat:
+    description: Manage JavaCombat plugins
+    usage: "/javacombat <reload|toggle|status>"
+    permission: mcjavacombat.admin
+permissions:
+  mcjavacombat.admin:
+    default: op
+    
