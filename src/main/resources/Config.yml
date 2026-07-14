@@ -1,0 +1,50 @@
+# =====================================================
+#  JavaCombat - Configuration
+#  All values below mimic the original Minecraft Java Edition 1.9+ formula
+# =====================================================
+
+# Enable/disable modules separately
+modules:
+  attack-cooldown: true      # cooldown system
+  critical-hit: true         # critical hit while falling
+  sweep-attack: true         # sweep attack sword to surrounding entities 
+  sprint-reset: true         # sprint stops when hit/attacked 
+  java-knockback: true       # Java-style knockback formula
+  shield-block: true         # blocking with a shield reduces damage
+
+
+# Base cooldown (in ticks, 20 ticks = 1 second) per item category.
+# Java formula: cooldown = 20 / attackSpeedAttribute
+attack-speed:
+  hand: 4.0
+  sword: 1.6
+  axe: 0.8
+  pickaxe: 1.2
+  shovel: 1.0
+  hoe: 2.0
+  trident: 1.1
+  default: 4.0
+
+# Damage scaling: modifier = min-modifier + (progress^2 * (1 - min-modifier))
+damage-scaling:
+  min-modifier: 0.2
+
+critical-hit:
+  multiplier: 1.5
+  min-cooldown-progress: 0.9   # minimum charge attack before it can be critical
+
+sweep-attack:
+  damage-multiplier: 0.5   # sweep damage = main attack damage * multiplier (before armor reduction)
+  radius: 1.6
+  min-cooldown-progress: 0.9
+
+knockback:
+  base-horizontal: 0.4
+  base-vertical: 0.4
+  vertical-limit: 0.4
+  sprint-bonus-horizontal: 0.5
+  sprint-bonus-vertical: 0.1
+
+shield:
+  damage-reduction: 0.5     # 0.5 = reduce 50% damage when block is successful (besides axe-disable)
+  
